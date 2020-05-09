@@ -1,0 +1,93 @@
+header {
+
+}
+.nav {
+    border: 1px black solid;
+    width: 100%;
+    background-image: url("gastenboekIMG/gastenboek.jpg");
+    background-size: 40vw;
+    background-repeat: no-repeat;
+    box-shadow: 3px 2px gray;
+}
+.login {
+    margin-left: 65vw;
+}
+
+.logo {
+    max-width: 50vw;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: -12px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+main {
+    margin-top: inherit;
+}
+
+.info {
+    display: inline-block;
+    margin: 20px auto;
+    margin-left: 3vw;
+}
+
+.cont {
+    margin-left: 2vw;
+    margin: 0px auto;
+    border: 1px solid;
+    box-shadow: 3px 2px gray;
+}
+
+.bericht {
+    width: 85vw;
+    height: 10vh;
+    margin-left: 3vw;
+    margin-bottom: 2vh;
+}
+
+.titel {
+    margin-left: 30vw;
+}
+
+.berchtbox {
+    border: 1px solid black;
+    box-shadow: 3px 2px gray;
+}
+
+.B {
+    background-color: #F4F4F4;
+    max-width: 90vw;
+    margin-left: 2.5vw;
+}
+
+@media screen and (min-width: 415px) {
+
+    button {
+        padding: 10px;
+        width: 25%;
+        margin-left: 20vw;
+    }
+    .nav {
+        background-size: 10vw;
+    }
+    main {
+        margin-top: 5vh;
+    }
+    .titel {
+        font-size: 25px;
+        margin-left: 42vw;
+    }
+    .header {
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background-color: #f6f6f6;
+        margin-bottom: 10px;
+    }
+}
