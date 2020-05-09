@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>Inhoud Box</h2>
+        <div>
+            <label for="width">side 1</label>
+            <input type="text" name="width" id="width" value="" />
+        </div>
+        <div>
+            <label for="height">side 2</label>
+            <input type="text" name="height" id="height" value="" />
+        </div>
+        <div>
+            <label for="opperv">side 3</label>
+            <input type="text" name="opperv" id="opperv" value="" />
+        </div>
+        <p id="a"></p>
+        <div>
+            <input type="button" value="inhoud" id="submit" onclick="box()"/>
+        </div>
+    </div>
+    <div>
+    <h2>Oppervlakte rechthoek</h2>
+        <div>
+            <label for="breed">side 1</label>
+            <input type="text" name="breed" id="breed" value="" />
+        </div>
+        <div>
+            <label for="lengte">side 2</label>
+            <input type="text" name="lengte" id="lengte" value="" />
+        </div>
+        <p id="a1"></p>
+        <div>
+            <input type="button" value="oppervlakte" id="inn" onclick="rectangle()"/>
+        </div>
+    </div>
+    <div>
+        <h2>Oppervlakte cirkel</h2>
+        <div>
+            <label for="straal">straal</label>
+            <input type="text" name="straal" id="straal" value="" />
+        </div>
+        <p id="a2"></p>
+        <div>
+            <input type="button" value="oppervlakte" id="inn" onclick="cirkel()"/>
+        </div>
+    </div>
+    <div>
+        <h2>volume bol</h2>
+        <div>
+            <label for="straall">straal</label>
+            <input type="text" name="straall" id="straall" value="" />
+        </div>
+        <p id="a3"></p>
+        <div>
+          <input type="button" value="oppervlakte" id="inn" onclick="volume()"/>
+        </div>
+    </div>
+    <script>
+        function box() {
+            let opperv = document.getElementById('opperv').value;
+            let width = document.getElementById('width').value;
+            let height = document.getElementById('height').value;
+            let total = width * height * opperv;
+            document.getElementById('a').innerText = `antwoord is: ${total}`;
+            return false;
+        }
+
+        function rectangle() {
+            let breed = document.getElementById('breed').value;
+            let lengte = document.getElementById('lengte').value;
+            let total = breed * lengte;
+            document.getElementById('a1').innerText = `antwoord is: ${total}`;
+            return false;
+        }
+        function cirkel() {
+            let straal = document.getElementById('straal').value;
+            let total = Math.PI * straal * straal;
+            document.getElementById('a2').innerText = `antwoord is: ${total}`;
+            return false;
+        }
+        function volume() {
+            let straall = document.getElementById('straall').value;
+            let total = 4 / 3 * Math.PI * straall * straall * straall;
+            document.getElementById('a3').innerText = `antwoord is: ${total}`;
+            return false;
+        }
+    </script>
+</body>
+
+</html>

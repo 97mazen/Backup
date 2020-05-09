@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta http-equiv="content-type"
+              content="text/html;
+            charset=UTF-8">
+        <title>lab04</title>
+
+    </head>
+    <body>
+        <p id="kleur"></p>
+        <p id="kleur1"></p>
+        <p id="kleur2"></p>
+        <p id="kleur3"></p>
+        <p id="kleur4"></p>
+        <p id="kleur5"></p>
+
+        <script>
+            var palet = new Array('wit' , 'bluwe ' , 'groen ' , 'rood' , 'zwart',);
+            document.getElementById('kleur').innerHTML = (
+                'palet is nu: ' + palet
+            );
+
+            var nieuwekleur = prompt('Typ een niewe kluer in : ');
+            palet.push(nieuwekleur);
+            document.getElementById('kleur1').innerHTML = (
+                'palet is nu: ' + palet
+            );
+
+            var nieuwekleur = prompt('Typ een nieuwe kleur in: ');
+            palet.unshift(nieuwekleur);
+            document.getElementById('kleur2').innerHTML = (
+                'palet nu is: ' + palet
+            );
+
+            palet.sort();
+            document.getElementById('kleur3').innerHTML = (
+                'palet is nu: ' + palet
+            );
+
+            palet2 = palet.splice(4 , 3);
+            document.getElementById('kleur4').innerHTML = (
+                'palet is nu: ' + palet2 + '<br> palet2 is nu: ' + palet
+            );
+
+            palet3 = palet2.slice();
+            document.getElementById('kleur5').innerHTML = (
+                'palet3 is nu: ' + palet3
+            );
+
+
+
+        </script>
+
+
+    </body>
+
+
+
+</html>

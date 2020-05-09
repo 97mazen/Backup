@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Create dynamic elements</title>
+</head>
+<body>
+
+<button onclick="myFunction()">kilk</button>
+
+<script>
+    var count = 0;
+    function myFunction() {
+        var btn = document.createElement("div");
+        btn.innerHTML = `<div>random foto</div>`;
+        btn.innerHTML += `<img src="https://loremflickr.com/320/240/?random=${count}"/>`;
+        count++;
+        document.body.appendChild(btn);
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lab 8</h1>
+    <P id="date"></P>
+    <p id="fa"></p>
+    <p id="be"></p>
+    <p id="tijd"></p>
+    <script>
+        let date = new Date();
+
+        let date2 = new Date();//VANDAAG
+
+        let day = (1000*60*60*24);//day in millisecond
+
+        date2.setTime(date.getTime()-15*day);
+
+        console.log("date1"+ date);
+        console.log("date2"+ date2);
+        date2.setDate(date.getDate() - 15);
+        document.getElementById('date').innerHTML = 'vandaag is : ' + date.getDate()+ '/'+ parseInt(date.getMonth()+1) + ' ' + date.getFullYear();
+        document.getElementById('fa').innerHTML = 'Factuurdatum is: ' + date2.getDate() + '/' + parseInt(date2.getMonth()+1) + ' ' + date2.getFullYear();
+        date2.setMonth(date2.getMonth() + 1);
+
+        console.log("date3" + date2);
+        document.getElementById('be').innerHTML = 'betaaldatum is: ' + date2.getDate() + '/' + parseInt(date2.getMonth()+1) + ' ' + date2.getFullYear();
+        document.getElementById('tijd').innerHTML = 'U hebt nog: ' + (date2 - date)/86400000 + ' dagen om te betalen';
+
+    </script>
+
+
+</body>
+</html>

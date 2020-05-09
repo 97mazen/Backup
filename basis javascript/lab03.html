@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta http-equiv="content-type"
+          content="text/html;
+            charset=UTF-8">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <p id="ta"></p>
+    <p id="ta1"></p>
+    <p id="ta2"></p>
+    <p id="ta3"></p>
+    <p id="ta4"></p>
+    <p id="ta4"></p>
+    <p id="ta5"></p>
+    <p id="ta6"></p>
+    <p id="ta7"></p>
+
+<script>
+   let testarray = new Array("een", "twee", "3", "vier");
+   testarray[4] = 5;
+   document.getElementById("ta").innerHTML = (
+       "" + testarray
+   );
+
+   document.getElementById("ta1").innerHTML = (
+       "Datatype is: " + typeof testarray[4]
+   );
+   testarray.pop();
+   document.getElementById("ta2").innerHTML = (
+       "" + testarray
+   );
+    testarray.unshift("nul");
+    document.getElementById("ta3").innerHTML = (
+        "" + testarray
+    );
+    document.getElementById("ta4").innerHTML = (
+        "Datatype [0] is: " + typeof index
+    );
+
+    testarray.splice(0, 1);
+    document.getElementById("ta5").innerHTML = (
+        "" + testarray
+    );
+
+    testarray.splice(1, 1);
+    document.getElementById("ta6").innerHTML = (
+        "" + testarray
+    );
+
+    testarray.splice(2, 1);
+    document.getElementById("ta7").innerHTML = (
+        "" + testarray
+    );
+
+
+</script>
+
+</body>
+
+</html>

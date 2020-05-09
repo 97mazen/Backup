@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Opdracht</title>
+</head>
+<body>
+    <div>
+        <div id="Prijs1"></div>
+        <div id="Prijs2"></div>
+    </div>
+
+    <script>
+        let bedrag =  prompt('schrijf een bedrag in');
+        let euro_dollarkoers = 1.36;
+        let dollar_eurokoers = 0.74;
+        let prijs1 = dollar_eurokoers * bedrag;
+        let prijs2 = euro_dollarkoers * bedrag;
+        document.getElementById('Prijs1').innerHTML = prijs1 + ' dollar';
+        document.getElementById('Prijs2').innerHTML = prijs2 + ' euro';
+    </script>
+
+</body>
+</html>

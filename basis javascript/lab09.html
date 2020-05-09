@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab9</title>
+</head>
+<body>
+    <h2 id="text"></h2>
+    <script>
+        let ueser;
+        let code;
+        switch (user=prompt('wat is je rol?')) {
+            case 'admin':
+             switch (code = prompt('wat is je inlogcode?')) {
+                 case 'admin':
+                     user = 'welkom admin';
+                     break;
+                 default:
+                     user = 'code ongeldig!!';
+             }
+                break;
+            case 'student':
+                switch (code = prompt('wat is je code?')) {
+                    case '12301':
+                        user = 'welkom student';
+                        break;
+                    default:
+                        user = 'code ongeldig!!'
+                }
+                break;
+            default:
+                user = 'rol ongeldig!!'
+        }
+        document.getElementById('text').innerHTML = user
+
+    </script>
+</body>
+</html>

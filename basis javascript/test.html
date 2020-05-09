@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p id="demo"></p>
+    <script>
+        var var1 = "true";
+        var var2 = 22;
+        var var3 = 22.22;
+        var var4 = false;
+        var var5 = 1844;
+
+        typeof var1;
+        typeof var2.toString();
+        typeof var3.toFixed(1);
+        typeof var4;
+        typeof parseFloat(var5.toString());
+
+        console.log(var1);
+        console.log(var2);
+        console.log(var3);
+        console.log(var4);
+        console.log(var5);
+        document.getElementById("demo").innerHTML =
+            typeof var5 + ' '+
+        typeof var4 + ' '+
+        typeof var3+ ' '+
+        typeof var2+ ' '+
+        typeof var1;
+
+        var aantalFietsers = 22;
+        if (aantalFietsers = 1) {
+            console.log(aantalFietsers);
+        }else{
+            console.log(aantalFietsers++);
+        }
+    </script>
+
+<script>
+    var nicknamesOfZlatan= ["Ibra", "Ibracadabra", "Ibra Supremacy", "Il Genio", "Thor", "The Big Man"];
+    var stringWithNicknamesOfZlatan = nicknamesOfZlatan.join("-");
+    var newArrayWithNicknames = stringWithNicknamesOfZlatan.join(nicknamesOfZlatan);
+    console.log("<br>Resultaat van de nieuwe array: " + newArrayWithNicknames);
+</script>
+
+</body>
+</html>

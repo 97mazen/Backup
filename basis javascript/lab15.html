@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab 15</title>
+</head>
+<body>
+    <form name="form">
+        <input type="text" name="word" placeholder="old word">
+        <input type="text" name="newWord" placeholder="newWord">
+        <input type="button" value="change" onclick="change('Dit document is een lang document maar ook een simpel document',
+         document.form.word.value, document.form.newWord.value);">
+    </form>
+    <div id="newtext"></div>
+    <div>origineel tekst: Dit document is een lang document maar ook een simpel document</div>
+
+    <script>
+        function change(text, word, newWord) {
+            splitsen = text.split(' ');
+            for (let x in splitsen){
+                if (splitsen[x] === word) {
+                    splitsen[x] = newWord;
+                }
+            }
+            text = splitsen.join(' ');
+            document.getElementById('newtext').innerHTML = 'nieuwe tekst: ' +text;
+        }
+    </script>
+</body>
+</html>

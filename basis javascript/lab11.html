@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab 11</title>
+</head>
+<body>
+
+    <p id="t1"></p>
+    <script>
+        let getal = new Array();
+        getal[0]= 'nul';
+        getal[1]= 'een';
+        getal[2]= 'twee';
+        getal[3]= 'drie';
+        getal[4]= 'vier';
+        getal[5]= 'vijf';
+        getal[6]= 'zes';
+        getal[7]= 'zeven';
+        getal[8]= 'acht';
+        getal[9]= 'negen';
+        let tekst = 'Je telefoonnummer is: ';
+        let telefoonnummer = prompt('wat is jou tefeloonnnummer?');
+        let div2 = document.createElement('div');
+        let div = document.createElement('div');
+        document.body.appendChild(div2);
+        document.body.appendChild(div);
+        for (let i = 0; i < telefoonnummer.length; i++) {
+            tekst += getal[telefoonnummer.charAt(i)] + ' ';
+        }
+        div2.innerHTML = telefoonnummer;
+        div.innerHTML = tekst;
+
+
+
+    </script>
+</body>
+</html>

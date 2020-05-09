@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab 12</title>
+</head>
+<body>
+    <script>
+        let laptop = new Array();
+        laptop['macbook'] = {
+            'model': 'air',
+            'vooraad': 2000,
+            'prijs': 1090
+        };
+        laptop['asusbook']= {
+            'model': 'wind',
+            'voorraad': 1000,
+            'prijs': 990
+        };
+        laptop['dellbook'] = {
+            'model': 'fire',
+            'voorraad': 987,
+            'prijs': 890
+        };
+        for (var merk in laptop) {
+            document.write('<br>Merk: ' + merk)
+            for (var property in laptop[merk]) {
+                document.write('<br>' + property + ': ' + laptop[merk][property]);
+                if(property === 'voorraad' && laptop[merk][property] < 1000) document.write('---waarschuwing---');
+            }
+        }
+    </script>
+</body>
+</html>

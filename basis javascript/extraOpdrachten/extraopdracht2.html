@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>Bereken de reiskosren</div>
+    <form name="van">
+        <select required name="select" id="stade">
+            <option value="Ams-Ame" >Amsterdam-Amersfoort</option>
+            <option value="Rot-Ams">Rotterdam-Amsterdam</option>
+            <option value="Utr-Ams">Utrecht-Amsterdam</option>
+            <option value="Ame-Utr">Amersfoort-Utrecht</option>
+            <option value="Rot-Ame">Amersfoort-Rotterdam</option>
+            <option value="Rot-Utr">Rotterdam-Utrecht</option>
+        </select>
+    </form>
+
+
+    <button onclick="prijs()">prijs</button>
+
+    <div id="l1"></div>
+    <script>
+        let KM;
+        let select = document.getElementById('stade');
+
+        function prijs() {
+            if (select.value === 'Ams-Ame') {
+                KM = 40;
+            }
+            else if (select.value === 'Rot-Ams'){
+                KM = 45;
+            }
+            else if (select.value === 'Utr-Ams'){
+                KM = 35;
+            }
+            else if (select.value === 'Ame-Utr'){
+                KM = 25;
+            }
+            else if (select.value === 'Rot-Ame'){
+                KM = 75;
+            }
+            else if (select.value === 'Rot-Utr'){
+                KM = 50;
+            }
+            if (KM < 25) {
+                money = (0.25 * KM) + 6.5
+            }
+            else if (KM >= 25 && KM <= 50 ) {
+                money = (0.23 * KM) + 6.5
+            }
+            else if (KM > 50) {
+                money = (0.21 * KM) + 6.5
+            }
+            document.getElementById('l1').innerHTML = KM + ' KM ' + money.toFixed(2) + 'Euro'
+        }
+    </script>
+</body>
+</html>

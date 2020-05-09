@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click events and styling</title>
+
+    <style>
+        @keyframes roteer {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        body {
+            margin: 0
+        }
+
+        section {
+            margin-left: 15px;
+        }
+
+        .vierkant {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 50px;
+            vertical-align: top;
+            text-align: center;
+            line-height: 200px;
+
+        }
+
+        @keyframes animation {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+
+    <script>
+        function reset() {
+            /* hier de code om alles weer terug te zetten naar de originele waarden */
+            document.getElementById("oefening").reset();
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+<main>
+    <section class="uitleg">
+        <h1>Opdracht uitleg</h1>
+        <p>In deze oefening gebruikt je 6 div elementen van 200 x 200 pixels. Deze DIV objecten hebben een zwarte solid
+            border van 1 pixel en staan als display:inline-block.<br>Geef ieder vierkant via het <em>onclick</em> event
+            (dus wanneer je op het element klikt) via DOM functies de volgende eigenschappen:</p>
+        <ul>
+            <li>vierkant 1: een rode achtergrondkleur</li>
+            <li>vierkant 2: een border van 2 pixels</li>
+            <li>vierkant 3: een rotatie van 45 graden</li>
+            <li>vierkant 4: verklein het object met de helft</li>
+            <li>vierkant 5: maak onzichtbaar</li>
+            <li>vierkant 6: start de animatie 'roteer' op dit object</li>
+            <li>vierkant 7: stel een achtergrond afbeelding (no-repeat center) in op:
+                https://www.rocmn.nl/themes/custom/rocmn/logo.svg?v=1538394935
+            </li>
+        </ul>
+
+        <p>Programmeer de reset-knop zodat je alle vierkanten weer terugzet naar hun standaard waarden.</p>
+        <p><span style="font-weight: bold;">Tip:</span>Gebruik voor deze laatste opdracht de eigen functie "reset" welke
+            je aanroept via het <em>onclick</em> event van de knop...</p>
+    </section>
+
+
+    <form id="oefening">
+        <button onclick="reset()">reset alles</button>
+        <hr>
+        <div class="container">
+            <div onclick="myFunction('item1')" id="item1" class="vierkant">rood</div>
+            <div onclick="myFunction('item2')" id="item2" class="vierkant">border 2px</div>
+            <div onclick="myFunction('item3')" id="item3" class="vierkant">roteer 45 graden</div>
+            <div onclick="myFunction('item4')" id="item4" class="vierkant">verklein met 0.5</div>
+            <div onclick="myFunction('item5')" id="item5" class="vierkant">maak onzichtbaar</div>
+            <div onclick="myFunction('item6')" id="item6" class="vierkant">start animate</div>
+            <div onclick="myFunction('item7')" id="item7" class="vierkant">afbeelding hier</div>
+        </div>
+
+
+    </form>
+</main>
+
+<script>
+    function myFunction(id) {
+        switch (id) {
+            case 'item1':
+                document.getElementById(id).style.backgroundColor = 'red';
+                break;
+            case 'item2':
+                document.getElementById(id).style.border = '2px solid black';
+                break;
+            case 'item3':
+                document.getElementById(id).style.transform = 'rotate(45deg)';
+            break;
+            case  'item4':
+                document.getElementById(id).style.transform = 'scale(0.5)';
+                break;
+            case 'item5':
+                document.getElementById(id).style.visibility = 'hidden';
+                break;
+            case 'item6':
+                document.getElementById(id).style.animation = 'animation 2s infinite';
+                break;
+            case 'item7':
+                document.getElementById(id).style.backgroundImage = "url('foto.jpg')";
+                break;
+
+        }
+    }
+</script>
+</body>
+</html>

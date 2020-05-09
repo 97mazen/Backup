@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta http-equiv="content-type"
+              content="text/html;
+            charset=UTF-8">
+    </head>
+    <body>
+        <p id="feet">je langte in feet is </p>
+        <script>
+            let foot = (langte = prompt("wat is je langte in meter"));
+            let  meter = 3.28084;
+            let lengteInMeter = foot * meter;
+            let resultText = "U lengte in voet is : ";
+            let para = document.getElementById("feet");
+            para.innerText = resultText + lengteInMeter + " meter";
+        </script>
+
+    </body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//<script>
+    let foot = (langte = prompt("wat is je langte in meter"));
+    let  meter = 3.28084;
+    let lengteInMeter = foot * meter;
+    let para = document.getElementById("feet");
+    let resultText = `Je lengte in meter is: ${lengteInMeter} meter`;
+
+    para.innerText = resultText;
+</script>
+
+
+<script>
+    let foot = (langte = prompt("wat is je langte in meter"));
+    let  meter = 3.28084;
+    let lengteInMeter = foot * meter;
+    let para = document.getElementById("feet");
+    let resultText = "Je lengte in meter is: " + lengteInMeter + " meter";
+
+    para.innerText = resultText;
+</script>//

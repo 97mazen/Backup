@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Test CSS selectors</title>
+    <style>
+        /* Zet het lettertype van de <body> op Arial (font-family) en maak de achtergrond groen */
+        body {font-family: Arial;background-color: green;}
+
+        /* Geef de unordered list items <ul> weer zonder ronde bullets ( list-style: none; ) */
+        nav ul {list-style: none;}
+
+        /* Geef de <a> elementen binnen het <nav> element een linkermarge van 50 pixels */
+        nav a {margin-left: 50px;}
+
+        /* Maak een class aan welke je 'lijn' noemt en zorg dat deze een zwarte border krijgt van 10 pixels dik met een boven- en ondermarge van 2 pixels */
+        .lijn {border: 10px solid black;margin: 2px 0px;}
+
+        /* Maak alle tekst in de <h1> elementen 30 pixels groot en de rgb kleur (123,45,65) , onderstreep deze tekst ook (text-decoration: underline) */
+        h1 {font-size: 30px; color:rgb(123,45,65);text-decoration: underline;}
+
+        /* Geef de 2e <div> een gestippelde (dotted) rand van 1 pixel dik en een marge van 25 pixels rondom */
+        header div:nth-of-type(2) {border: 1px dotted black;margin: 25px;}
+
+        /* Geef het <h3> element van het eerste <article> binnen het <main> element een rode tekstkleur */
+        main article:nth-of-type(1) h3 {color:red;}
+
+        /* Maak iedere <p> binnen een <article> geel als achtergrond */
+        article p {background-color: yellow;}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="alert('informatie pagina moet hier komen')">informatie</a></li>
+            <li><a href="#" onclick="alert('contact pagina moet hier komen')">contact</a></li>
+            <li><a href="mailto:m.kors@rocmn.nl?SUBJECT=reactie">email</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="lijn"></div>
+
+    <a href="http://youtube.com" target="_blank">Youtube</a>
+
+    <header>
+        <h1>Welkom bij de grote (proef) CSS selector test</h1>
+        <div><em>test je kennis over CSS</em></div>
+        <div>Deze tekst in een dotted box</div>
+        <div>Dit is een stukje tekst waar niets mee gebeurt</div>
+    </header>
+
+    <h3>En dan nu de inhoud</h3>
+
+    <main>
+        <article>
+            <h3>artikel 1 (moet rood worden)</h3>
+            <p>Hier het 1e artikel</p>
+        </article>
+
+        <article>
+            <h3>artikel 2</h3>
+            <p>Hier het 2e artikel</p>
+        </article>
+
+        <article>
+            <h3>artikel 3</h3>
+            <p>Hier het 3e artikel</p>
+        </article>
+    </main>
+
+
+
+</body>
+</html>

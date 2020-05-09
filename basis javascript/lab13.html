@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab 13</title>
+</head>
+<body>
+    <div id="A"></div>
+    <div id="b"></div>
+    <script>
+        var index = 0;
+        var string = '1,2,3,4,5,6,7,8,9,0#';
+        var string2 = '1, 2, 3#';
+        do {
+            document.getElementById('A').innerText += string.charAt(index);
+            console.log(string.charAt(index));
+            index++;
+        } while(string.charAt(index) !== '#');
+        index = 0;
+
+        do{
+            document.getElementById('b').innerText += string2.charAt(index);
+            console.log(string.charAt(index));
+            index++;
+        } while(string2.charAt(index) !== '#');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta http-equiv="content-type"
+              content="text/html;
+            charset=UTF-8">
+        <title>Objecten</title>
+
+    </head>
+
+    <body>
+
+        <p id="array"></p>
+        <p id="array2"></p>
+        <p id="array3"></p>
+        <p id="array4"></p>
+        <p id="array5"></p>
+
+        <script>
+            let laptops = [];
+            laptops['mackbook'] = {
+                'model': 'air',
+                'voorraad': 2000,
+                'prijs': 1090,
+            };
+            document.getElementById('array').innerHTML = (
+                'Opgave 42: laptops array aangemaakt'
+            );
+
+            laptops['asusbook'] = {
+                'model': 'wind',
+                'voorraad': 1000,
+                'prijs': 990
+            };
+            laptops['dellbook'] = {
+                'model': 'fire',
+                'voorraad': 987,
+                'prijs': 890
+            };
+
+            document.getElementById('array2').innerHTML = (
+                'Opgave 43: laptops array uitgebreid'
+            );
+
+            document.getElementById('array3').innerHTML = (
+                'Opgave 44: De laptops array heft ' + laptops.length + ' elementen'
+            );
+
+            let mac = 'mackbook' in laptops;
+            let asus = 'asusbook' in laptops;
+            let dell = 'dellbook' in laptops;
+            document.getElementById('array4').innerHTML = (
+                'Opgave 45: de veriable <br> mac is: ' +mac
+            );
+
+            document.getElementById('array5').innerHTML = (
+                '<br> Mac specificaties -------- ' +
+                    '<br> model: ' + laptops['mackbook']['model'] +
+                        '<br> voorraad: ' + laptops ['mackbook']['voorraad'] +
+                            '<br> Prijs: ' + laptops ['mackbook']['Prijs']
+            );
+
+        </script>
+
+    </body>
+
+
+</html>

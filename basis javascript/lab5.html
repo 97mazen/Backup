@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="da"></p>
+    <p id="da1"></p>
+    <p id="da2"></p>
+    <p id="da3"></p>
+    <p id="da4"></p>
+
+
+    <script>
+        eiddatum = prompt('Wat is de einddatum JJJJ-MM-DD?');
+        var deadline = new Date(eiddatum);
+        document.getElementById('da').innerHTML = ('deadline: ' + deadline );
+        var nu = Date.now();
+        var dag = 86400000;
+        var resterende = ((deadline - nu ) / dag);
+        document.getElementById('da1').innerHTML = ('Er zijn nog: ' + resterende.toFixed(0) + ' dagen te gaan')
+
+    </script>
+</body>
+</html>

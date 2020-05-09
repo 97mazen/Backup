@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first"></div>
+    <div id="scound"></div>
+    <div id="third"></div>
+    <script>
+        let Break = '';
+        for (let i = 10; i >= 0; i--){
+            for (let j = 0; j < i; j++){
+                Break += j;
+            }
+            Break += '<br>'
+        }
+        document.getElementById('first').innerHTML = Break;
+        let Break1 = '';
+        for (let x = 0; x <= 10; x++){
+            for (let y = 0; y < x; y++){
+                Break1 += y;
+            }
+            Break1 += '<br>'
+        }
+        document.getElementById('scound').innerHTML = Break1;
+        let Break2 = '';
+        for (let z = 0; z <= 10; z++){
+            for (let m = 0; m < z; m++){
+                Break2 += '*';
+            }
+            Break2 +='<br>';
+        }
+        for (let t = 9; t >= 0; t--){
+            for (let n = 0; n < t; n++){
+                Break2 += '*';
+            }
+            Break2 += '<br>'
+        }
+        document.getElementById('third').innerHTML = Break2;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+/* Zet het lettertype van de <body> op Arial (font-family) en maak de achtergrond groen */
+body {font-family: Arial;background-color: green;}
+
+/* Geef de <a> elementen binnen het <nav> element een linkermarge van 50 pixels */
+nav a {margin-left: 50px;}
+
+/* Maak een class aan welke je 'ruler' noemt en zorg dat deze een zwarte border krijgt van 2 pixels dik met een boven- en ondermarge van 5 pixels */
+.ruler {border: 2px solid black;margin: 5px 0px;}
+
+/* Maak alle tekst in de <h1> elementen 40 pixels groot en rood */
+h1 {font-size: 40px; color:red;}
+
+/* Geef de 2e <div> een gestippelde (dotted) rand van 1 pixel dik en een marge van 25 pixels rondom */
+header div:nth-of-type(2) {border: 1px dotted black;margin: 25px;}
+
+/* Geef het <h3> element van het eerste <article> binnen het <main> element een rode tekstkleur */
+main article:nth-of-type(1) h3 {color:red;}
+
+/* Maak iedere <p> binnen een <article> geel als achtergrond */
+article p {background-color: yellow;}
+
+/* Geef het element met als 'lastinfo' een gesloten (solid) rand (border) van 2 pixel dik met de kleur blauw, zet de kleur in een HEXADECIMALE waarde */
+#lastinfo {border: 2px solid #0000FF;}
+
+/* Maak de tekst in de 3e div binnen de <footer> de volgende kleur: #00AFFF  */
+footer div:nth-of-type(3) {color: #00AFFF;}
+
+/* Maak het <h1> element binnen de <header> WIT wanneer de muis eroverheen wordt bewogen (hover), gebruik de rgb() methode om de kleur in te stellen */
+header h1:hover {color:rgb(255,255,255);}
+

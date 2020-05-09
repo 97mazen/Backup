@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Readed</title>
+
+    <style>
+        article {
+            border: 1px solid gray;
+            margin-bottom:2%;
+            padding: 2%;
+            position: relative;
+        }
+
+
+    </style>
+
+    <script>
+
+
+
+    </script>
+
+</head>
+
+<body>
+<main>
+    <section class="uitleg">
+        <h1>Uitleg</h1>
+        <p>Maak in deze oefening 4 article elementen met in ieder article een &lt;p&gt; paragraaf element en daaronder een knop &lt;button&gt;</p>
+        <p>Wanneer je op de knop in het article klikt moet die tekst <em>grijs</em> worden en de <em>opacity 0.5</em> zodat het duidelijk is dat die tekst is gelezen.</p>
+
+        <p>Schrijf een hulpfunctie waaraan je het article id doorgeeft zodat je niet steeds dezelde code hoeft te herschrijven.<br>
+            Maak in deze functie gebruik van de DOM functie <em>firstElementChild</em></p>
+    </section>
+
+    <section class="oefening">
+        <article id="a1">artikel 1
+            <p>To the al dente cracker crumps add peanut butter, popcorn, bourbon and nutty quinoa.<br>The ultimate acceptance of heaven is to meet with mineral.</p>
+            <button onclick="myFunction('a1')">ready</button>
+        </article>
+        <article id="a2">artikel 2
+            <p>Flavor the caviar with thin oregano, lime, anise, and celery making sure to cover all of it.<br>Warp without core, and we won’t convert a parasite.</p>
+            <button onclick="myFunction('a2')">ready</button>
+        </article>
+        <article id="a3">artikel 3
+            <p>Empower and you will be knowed oddly.<br>Wow, stormy scallywag. you won't fight the pacific ocean.</p>
+            <button onclick="myFunction('a3')">ready</button>
+        </article>
+        <article id="a4">artikel 4
+            <p>View me whale, ye wet tobacco!<br>Rice combines greatly with quartered lettuce.</p>
+            <button onclick="myFunction('a4')">ready</button>
+        </article>
+    </section>
+</main>
+
+    <script>
+        function myFunction(id) {
+            document.getElementById(id).firstElementChild.style.color = 'gray';
+            document.getElementById(id).firstElementChild.style.opacity = 0.5;
+        }
+    </script>
+</body>
+</html>

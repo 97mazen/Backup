@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab 17</title>
+
+    <style>
+        #hint {
+            background-color: red;
+            border: 1px solid black;
+            margin-right: 90%;
+        }
+
+    </style>
+</head>
+
+<body>
+<h1>lab 17</h1>
+
+<h2>lingo</h2>
+
+<h3>Stadsnaam?</h3>
+<p id="hint"></p>
+
+<h3>gok:</h3>
+<input id="gok" type="text" name="gokinput">
+<button onclick="gok()">gok</button>
+
+<h3 id="goedtxt"></h3>
+
+<script>
+    var woorden = ["amsterdam", "barcelona", "londen", "parijs", "berlijn", "antwerpen", "rome", "madrid"];
+    var huidigwoordstring = "";
+    var huidigwoord = 0;
+    var showletters = "";
+    var gokinput = document.getElementById("gok");
+    var hinttxt = document.getElementById("hint");
+    var goedtxt = document.getElementById("goedtxt");
+    huidigwoordstring = woorden[(Math.random() * 7).toFixed(0)];
+    for (var i = 0; i <= huidigwoordstring.length; i++) {
+        showletters += "?";
+    }
+    hinttxt.innerHTML = showletters;
+
+    function gok() {
+        if (gokinput.value == huidigwoordstring) {
+            goed();
+        } else {
+            hint();
+        }
+    }
+
+    function hint() {
+        showletters = "";
+        goedtxt.innerHTML = "Dat is Fout!";
+        for (var i = 0; i <= huidigwoordstring.length; i++) {
+            if (gokinput.value.charAt(i) == huidigwoordstring.charAt(i)) {
+                showletters += huidigwoordstring.charAt(i);
+            } else {
+                showletters += "?";
+            }
+        }
+        hinttxt.innerHTML = showletters;
+    }
+
+    function goed() {
+        hinttxt.innerHTML = huidigwoordstring;
+        goedtxt.innerHTML = "Dat is Goed!";
+    }
+</script>
+</body>
+
+</html>

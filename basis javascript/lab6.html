@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+    <head>
+        <meta http-equiv="content-type"
+              content="text/html;
+                charset=UTF-8">
+        <title>lab 06</title>
+        <meta name="auteur" content="Mazen">
+        <meta name="datum" content="11/18/2019">
+    </head>
+
+    <body>
+        <h2>lab 06</h2>
+        <h3>Factuur</h3>
+        <p id="fa"></p>
+        <p id="fa1"></p>
+        <p id="name">name</p>
+        <p id="titel">titel</p>
+        <p id="aantal">aantal</p>
+        <p id="prijs">prijs</p>
+        <p id="bedrag">bedrag</p>
+        <p id="BTW">BTW</p>
+        <p id="totaal">in.btw</p>
+
+        <script>
+           let maanden = ['januari' , 'februari ' , 'maart' , 'april ' , 'mie ' , 'juni ' , 'juli ', 'agustus ' , 'september ' , 'oktober ' , 'November' , 'decamber' ];
+            let date = new Date();
+            let day = date.getDate();
+            let month =  maanden[date.getMonth()];
+            let jaar = date.getFullYear();
+            document.getElementById('fa').innerHTML = ('factuurdatum: ' + day + month + jaar );
+            document.getElementById('fa1').innerHTML = 'Betaaldatum is: ' +(day + 5) + month + jaar;
+
+            let klantnaam= prompt("voer je eigen naam in");
+            let aantal =
+                parseInt(prompt("aantal boeken te bestellen?"));
+            let titel = "JavaScript";
+            let prijs = 29.90;
+            let hetbedrag = aantal * prijs;
+            let btw = 0.06 * hetbedrag;
+            let inclusief_btw = btw + hetbedrag;
+
+            document.getElementById("name").innerText = (
+                "Bedankt voor je bestelling: "+klantnaam);
+            document.getElementById("titel").innerText = (
+                "Boektitel is: "+titel);
+            document.getElementById("aantal").innerText =(
+                "Antal te bestellen: "+aantal);
+            document.getElementById("prijs").innerText =(
+                "Prijs per boek is: "+prijs.toFixed(2));
+            document.getElementById("bedrag").innerText=(
+                "Bedrag is: "+hetbedrag);
+            document.getElementById("BTW").innerText=(
+                "BTW is: "+btw);
+            document.getElementById("totaal").innerText=(
+                "Totaal inclusief BTW is: "+inclusief_btw);
+
+        </script>
+
+
+    </body>
+
+
+
+</html>

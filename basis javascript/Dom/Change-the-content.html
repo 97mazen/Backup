@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change the content</title>
+    <style>
+
+        body {margin:0}
+
+        section {margin-left: 15px;}
+
+        .row > div {display: inline-block;}
+
+    </style>
+
+</head>
+<body>
+<main>
+    <section class="uitleg">
+        <h1>Uitleg</h1>
+        <p>Maak in dit document een &lt;input&gt; text element waarin je je naam in kan vullen.<br>
+            Wanneer de naam is ingevuld moet onder dit element de tekst verschijnen:<h3>Je naam is: [ingevulde naam]</h3> </p>
+
+        <p>Tip: je kunt hier gebruik maken van het event <em>onblur</em> (dit wordt afgevuurd bij verlaten van het input veld)</p>
+
+        <p>Voeg daarna een knop toe &lt;button&gt; en maak de zojuist geplaatste tekst in het id=resultaat weer leeg door op de knop de klikken</p>
+    </section>
+
+    <section class="oefening">
+        <hr>
+        <div class="row">
+            <div>Voor je naam in:</div>
+            <div>
+                <input id="voornaam" type="text"
+                       name="firstname" placeholder="vul je naam hier in">
+            </div>
+            <h3>Je naam is: <span id="resultaat"></span></h3>
+        </div>
+
+            <div>
+                <button>wissen</button>
+            </div>
+    </section>
+</main>
+
+<script>
+    let myInput = document.getElementById('voornaam');
+    let output = document.getElementById('resultaat');
+
+    myInput.onblur = function () {
+        output.textContent = myInput.value;
+
+    }
+</script>
+</body>
+</html>

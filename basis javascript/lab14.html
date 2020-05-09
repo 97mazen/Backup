@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab 14</title>
+</head>
+<body>
+    <h1 id="lol"></h1>
+    <script>
+        alfa = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        function xwoord() {
+            var newWord = '';
+            for (x = 0; x < 5; x++){
+                nummer = Math.floor((Math.random()*26));
+                console.log(alfa[nummer]);
+                newWord += alfa[nummer];
+            }
+            return newWord;
+        }
+        document.getElementById('lol').innerHTML = xwoord();
+    </script>
+</body>
+</html>
