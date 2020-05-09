@@ -1,0 +1,44 @@
+body {
+    background-color: #00AFFF;
+}
+.container-2 {
+    display: flex;
+    margin-left: 15%;
+}
+.container {
+    border: 1px solid black;
+    height: 600px;
+    background: #e0ebeb;
+    border-radius: 50%;
+}
+h1 {
+    text-align: center;
+    margin-top: 90px;
+}
+img {
+    width: 200px;
+}
+.album {
+    margin-top: 30px;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+i {
+    font-size: 30px;
+}
+i:hover {
+    color: red;
+    font-size: 35px;
+}
+.disc {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+    top: -350px;
+    left: 47%;
+    background: gray;
+    opacity: 0.8;
+}
+
