@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+    overflow-y: scroll;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+#header {
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    background: rgb(52, 73, 94);
+    color: #fff;
+}
+
+.logo {
+    line-height: 75px;
+    margin-left: 20px;
+    float: left;
+    text-transform: uppercase;
+    color: burlywood;
+}
+
+.menu {
+    float: right;
+    line-height: 75px;
+}
+
+.menu a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.show-menu-btn,
+.hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 75px;
+    margin-right: 10px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+    color: burlywood;
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    text-align: center;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+section#intro {
+    background: url('../img/RSI_4.png') no-repeat center center/cover;
+    background-color: #ffffff;
+    background-attachment: fixed;
+}
+
+section#Werkhouding {
+    background: url('../img/RSI_6.png') no-repeat center center/cover;
+    background-color: #ffffff;
+    background-attachment: fixed;
+}
+
+section#Werkplek {
+    background: url('../img/RSI_2.png') no-repeat center center/cover;
+    background-color: #ffffff;
+    background-attachment: fixed;
+}
+
+section#Werkorganisatie {
+    background: url('../img/RSI_5.png') no-repeat center center/cover;
+    background-color: #ffffff;
+    background-attachment: fixed;
+}
+
+section#contact {
+    background-color: cornsilk;
+    height: 100vh;
+}
+
+.content {
+    width: 90%;
+    padding-top: 75px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.438);
+}
+
+iframe {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:800px) {
+    .show-menu-btn,
+    .hide-menu-btn {
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #chk:checked~.menu {
+        right: 0;
+    }
+    .video {
+        width: 60%;
+        height: 39%;
+    }
+    .wit {
+        font-size: 1rem
+    }
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    display: block;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+input[type=submit]:hover {
+    background-color: brown;
+}
+
+input[type=email] {
+    width: 50%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+textarea {
+    margin: 0 auto;
+    display: block;
+    resize: none;
+    width: 90%;
+    height: 150px;
+}
+
+footer {
+    background-color: #34495E;
+    height: 3vh;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    color: black;
+}
+
+.button1 {
+    border-radius: 25%;
+    position: fixed;
+    background-color: #34495E;
+    color: white;
+    float: right;
+    height: 50px;
+    width: 50px;
+    bottom: 1vh;
+    right: 1vw;
+}
+
+.button1:hover {
+    color: #3498db;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+img {
+    float: right;
+}
+
+li {
+    text-align: center;
+}
