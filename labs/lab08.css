@@ -1,0 +1,52 @@
+div {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    opacity: 0.7;
+    text-align: center;
+    font-size: 1.7rem;
+    color: aliceblue;
+}
+.verticaal {
+    margin: 30px 20px 0 0;
+    /*transform: skew(0, -30deg);*/
+    animation-name: revolutie;
+    animation-duration: 3s;
+    transform: rotate(15deg);
+}
+.verticaal p {
+    font-size: 0px;
+    position: relative;
+    border-radius: 50%;
+    background: white;
+    : inherit;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+
+#een {
+    background: blue;
+    z-index: 1;
+
+}
+
+#twee {
+    background: #ff0080;
+    z-index: 1;
+    position: relative;
+    left: 30%;
+    top: -180px;
+}
+#drie {
+    background: green;
+    z-index: 1;
+    position: relative;
+    left: 60%;
+    top: -350px;
+}
+@keyframes revolutie  {
+    from{ transform: rotateX(0deg);}
+    to {transform: rotate(360deg);}
+}
+

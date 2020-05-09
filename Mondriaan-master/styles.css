@@ -1,0 +1,92 @@
+.lijst {
+    width:  500px;
+    height: 500px;
+    border: 1px solid #f2f2f2;
+    background-color: #f2f2f2;
+    position: relative;
+}
+
+.red_square {
+    background-color: red;
+
+    width: 115px;
+    height: 175px;
+
+}
+
+.black_divider_large_v {
+    background-color: black;
+    width: 10px;
+    height: 500px;
+    position: relative;
+    top: -1095px;
+    left: 115px;
+}
+
+.black_divider_large_h {
+    background-color: black;
+    width: 500px;
+    height: 10px;
+    position: relative;
+    top: -1220px;
+}
+
+.blue_square {
+    background-color: blue;
+    position: relative;
+    top: -480px;
+    width: 115px;
+    height: 125px;
+}
+
+.black_divider_short_1 {
+    background-color: black;
+    width: 115px;
+    height: 10px;
+    position: relative;
+    top: -1430px;
+}
+
+.black_divider_short_2 {
+    background-color: black;
+    width: 10px;
+    height: 115px;
+    position: relative;
+    left: 440px;
+    top: -1230px;
+}
+
+.yellow_square {
+    background-color: yellow;
+    width: 50px;
+    height: 115px;
+    position: relative;
+    top: -595px;
+    left: 450px;
+}
+.white_square_small {
+    background-color: antiquewhite;
+    width: 115px;
+    height: 190px;
+    position: relative;
+    top: -480px;
+}
+
+.white_square_large {
+    background-color: antiquewhite;
+    width: 375px;
+    height: 375px;
+    position: relative;
+    top: -175px;
+    left: 125px;
+}
+
+.white_square_medium {
+    background-color: antiquewhite;
+    width: 325px;
+    height: 115px;
+    position: relative;
+    top: -165px;
+    left: 120px;
+}
+

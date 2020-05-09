@@ -1,0 +1,82 @@
+<!-- website RadioGaGa -->
+<!doctype html>
+<html lang="nl" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta http-equiv="content-type"
+              content="text/html;
+              charset=UTF-8">
+
+        <metal name="author" content="Mazen">
+        <metal name="robots" content="all">
+        <metal name="language" content="dutch">
+        <metal name="description" content="RadioGaGa markting">
+        <meatl name="copyright" content="copyright">
+        <metal name="keywords" content="RadioGaGa, muziek, playlist">
+
+        <title>RadioGaGa</title>
+        <link rel="stylesheet" href="lab10.css">
+    </head>
+
+    <body>
+
+        <main>
+            <fieldset>
+                    <legend>Inschrijfformulier</legend>
+
+                <select required name="cursus" id="cursus">
+                    <option value="0">Kies een cursus</option>
+                    <option value="Manu Chau">Manu Chau</option>
+                    <option value="Evaescence">Evanescence</option>
+                            <option value="Sade">Sade</option>
+                </select><br>
+
+                <select required name="locatie" id="locatie">
+                    <option value="0">Kies een locatie</option>
+                    <option value="Amersfoort">Amersfoort</option>
+                    <option value="Amsterdam">Amsterdam</option>
+                    <option value="Utrecht">utrecht</option>
+                </select><br>
+
+                    <label for="datum">Begindatum: </label><br>
+
+                    <input required type="date" name="datum" id="datum"><br>
+
+                <label for="Selecteer_opleiding">Selecteer opleiding: </label>
+                    BOL <input type="radio" name="Selecteer_opleiding" value="BOL">
+                    BBL <input type="radio" name="Selecteer_opleiding" value="BBL"><br>
+                    <input required type="text" id="voornaam" name="voornaam" placeholder="voornaam"><br>
+                    <input required type="text" id="achternaam" name="Achternaam" placeholder="Achternaam"><br>
+                    <input required type="tel" id="Adres" name="Adres" placeholder="Adres"><br>
+                    <input required type="text" placeholder="Woonplaats" name="Woonplaats" id="woonplaats" list="steden"><br>
+                    <input required type="email" id="email" name="naam" placeholder="E-mail"><br>
+                    <input required type="text" id="mobiel" name="mobiel" placeholder="Mobiel"><br>
+
+                <datalist id="steden">
+                        <option value="Amsterdam">
+                        <option value="Utrecht">
+                        <option value="Antwerpen">
+                        <option value="Apeldoorn">
+                        <option value="Brussel">
+                        <option value="Rotterdam">
+                </datalist>
+
+                    <label for="voorkeur">Geef je voorkeur aan:</label><br>
+                    Avondschool:
+                    <input type="checkbox" name="avondschool"
+                           id="avondschool" value="avondschool"><br>
+                    Weekendschool:
+                    <input type="checkbox" name="Weekendschool"
+                           id="Weekendschool" value="Weekendschool"><br>
+                    Geen voorkeur:
+                    <input type="checkbox" name="Geen voorkeur"
+                           id="Geen voorkeur" value="Geen voorkeur"><br>
+                    <label for="opleiding">Opleidingsniveau</label><br>
+                    <input type="range" name="opleiding" id="opleiding" min="1" max="5">
+            </fieldset>
+                <input type="submit" id="verzend"
+                           name="verzend" value="Verzend">
+        </main>
+
+
+    </body>
+</html>

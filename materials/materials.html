@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Material design</title>
+        <link rel="stylesheet" href="materials.css"/>
+    </head>
+
+    <body>
+
+        <div>
+            <div class="header"></div>
+            <div class="tabs">
+                    <div class="tab" id="tab1" onclick=
+                            "document.getElementById('card1').style.display='block';
+                            document.getElementById('card2').style.display='none';
+                            document.getElementById('card3').style.display='none';">
+                            Tab1
+                    </div>
+
+                    <div class="tab" id="tab2" onclick=
+                            "document.getElementById('card1').style.display='none';
+                            document.getElementById('card2').style.display='block';
+                            document.getElementById('card3').style.display='none';">
+                            Tab2
+                    </div>
+
+                    <div class="tab" id="tab3" onclick=
+                            "document.getElementById('card1').style.display='none';
+                            document.getElementById('card2').style.display='none';
+                            document.getElementById('card3').style.display='block';">
+                            Tab3
+                    </div>
+            </div>
+        </div>
+
+                <div class="cards" id="card1" style="display:none">
+                    <div class="content-left">
+                        card1
+                        <div class="x-icon" onclick="document.getElementById('card1').style.display='none';">
+                            X
+                        </div>
+                    </div>
+                    <div class="content-right"> Content 1 </div>
+                </div>
+
+                <div class="cards" id="card2" style="display:none">
+                    <div class="content-left">
+                        card2
+                        <div class="x-icon" onclick="document.getElementById('card2').style.display='none';">
+                            X
+                        </div>
+                    </div>
+                    <div class="content-right"> Content 2 </div>
+                </div>
+
+                <div class="cards" id="card3" style="display:none">
+                    <div class="content-left">
+                        card3
+                        <div class="x-icon" onclick="document.getElementById('card3').style.display='none';">
+                            X
+                        </div>
+                    </div>
+                    <div class="content-right"> Content 3 </div>
+                </div>
+    </body>
+</html>
